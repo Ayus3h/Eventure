@@ -6,7 +6,7 @@ import Feather from '@expo/vector-icons/Feather';
 export default function Events() {
   return (
     <>
-      <Stack.Screen options={{ title: 'Events' }} />      
+      <Stack.Screen options={{ title: 'Ayush' }} />      
     
       <Text>Wed 13, Sep - 19:30 CET</Text>
       <Text>This is the Title</Text>

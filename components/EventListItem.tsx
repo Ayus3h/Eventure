@@ -28,7 +28,7 @@ export default function EventListItem({ event }){
       <View className='flex-row gap-3'>
         <Text className="text-gray-700 mr-auto">16 Going</Text>
         <Feather name="share" size={20} color="grey" />
-        <Feather name="bookmark" size={24} color="gray" />
+        <Feather name="bookmark" size={20} color="gray" />
       </View>
       </View>
     )

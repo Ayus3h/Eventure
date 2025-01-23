@@ -1,27 +1,20 @@
-import { Stack } from 'expo-router';
 import React from 'react';
-import { View, Text, Image } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
+import { Stack } from 'expo-router';
+import { View, Text, Image } from 'react-native';
+
+import EventListItem from '~/components/EventListItem';
+import events from '~/assets/events.json';
 
 export default function Events() {
   return (
     <>
-      <Stack.Screen options={{ title: 'Ayush' }} />      
-    
-      <Text>Wed 13, Sep - 19:30 CET</Text>
-      <Text>This is the Title</Text>
-      <Text>City Hall</Text>
-
-      {/* Event Image */}
-      <Image 
-        source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg' }} 
-        style={{ width: 200, height: 200 }} >
-      </Image>
-
-      {/* Footer */}
-      <Text>16 Going</Text>
-      <Feather name="share" size={20} color="grey" />
-      <Feather name="bookmark" size={24} color="gray" />
+      <Stack.Screen options={{ title: 'Events' }} />      
+      
+      {/* Event List Item */}
+      <EventListItem event={events[0]} />
+      <EventListItem event={events[1]} />
+      <EventListItem event={events[2]} />
     </>
   );
 }

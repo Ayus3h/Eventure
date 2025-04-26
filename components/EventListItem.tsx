@@ -5,7 +5,7 @@ import { Link } from 'expo-router';
 
 export default function EventListItem({ event }){
     return (
-      <Link href="/event" asChild>
+      <Link href={`/${event.id}`} asChild>
       <Pressable className="pb-3 gap-3 border-b-2 border-gray-100 m-3">
       <View className='flex-row'>
         <View className='flex-1 gap-2'>

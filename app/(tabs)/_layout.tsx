@@ -18,17 +18,22 @@ export default function TabLayout() {
         tabBarActiveTintColor: 'black',
       }}>
       <Tabs.Screen
-        name="index"
+        name="events"
         options={{
-          title: 'Tab One',
+          title: 'Events',
+          headerShown: false,
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <HeaderButton />
-            </Link>
-          ),
         }}
       />
+
+      <Tabs.Screen
+        name="create"
+        options={{
+          title: 'New event',
+          tabBarIcon: ({ color }) => <TabBarIcon name="plus" color={color} />,
+        }}
+      />
+
       <Tabs.Screen
         name="profile"
         options={{

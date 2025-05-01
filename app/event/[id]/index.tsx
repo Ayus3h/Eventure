@@ -3,7 +3,7 @@ import { useLocalSearchParams, Stack, Link } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Text, View, Image, Pressable, ActivityIndicator } from 'react-native';
 
-//import SupaImage from '~/components/SupaImage';
+import SupaImage from '~/components/SupaImage';
 import { useAuth } from '~/contexts/AuthProvider';
 import { Attendance, Event } from '~/types/db';
 import { supabase } from '~/utils/supabase';

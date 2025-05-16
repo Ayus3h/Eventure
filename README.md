@@ -40,10 +40,10 @@ This project provides a comprehensive guide to building a full-stack event appli
 Here are some glimpses of the Watchlist App in action:
 
 Home Page
-<img src="images/Home.png" alt="Home Page Screenshot">
+<img src="images/Home.webp" alt="Home Page Screenshot">
 
 Event Page
-<img src="images/Event.png" alt="Event Page Screenshot">
+<img src="images/Event.webp" alt="Event Page Screenshot">
 
 ## Setup & Running
 

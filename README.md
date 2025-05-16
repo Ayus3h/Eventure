@@ -1,8 +1,8 @@
-# Meetup Clone with React Native, Expo, and Supabase
+# Eventure - An Event Management App with React Native, Expo, and Supabase
 
 ## Project Overview
 
-This project provides a comprehensive guide to building a full-stack event application similar to Meetup. It covers fundamental mobile development concepts, backend integration, and advanced features for a robust and scalable application.
+This project provides a comprehensive guide to building a full-stack event management application. It covers fundamental mobile development concepts, backend integration, and advanced features for a robust and scalable application.
 
 ---
 

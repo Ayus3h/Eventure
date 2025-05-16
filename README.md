@@ -67,3 +67,36 @@ Leveraging **Supabase with PostGIS**, the application implements:
 * **`nearby_events` Function:** A custom PostgreSQL function to efficiently query events within a specified radius from a given latitude and longitude.
 
 ```sql
+CREATE OR REPLACE FUNCTION nearby_events(lat FLOAT, long FLOAT)
+RETURNS TABLE (
+  id          public.events.id%TYPE,
+  created_at  public.events.created_at%TYPE,
+  title       public.events.title%TYPE,
+  description public.events.description%TYPE,
+  date        public.events.date%TYPE,
+  location    public.events.location%TYPE,
+  image_uri   public.events.image_uri%TYPE,
+  user_id     public.events.user_id%TYPE,
+  lat         FLOAT,
+  long        FLOAT,
+  dist_meters FLOAT
+)
+LANGUAGE sql
+AS $$
+  SELECT
+    id,
+    created_at,
+    title,
+    description,
+    date,
+    location,
+    image_uri,
+    user_id,
+    ST_Y(location_point::geometry) AS lat,
+    ST_X(location_point::geometry) AS long,
+    ST_Distance(location_point, ST_Point(long, lat)::geography) AS dist_meters
+  FROM
+    public.events
+  ORDER BY
+    location_point <-> ST_Point(long, lat)::geography;
+$$;

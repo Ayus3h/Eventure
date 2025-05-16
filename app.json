@@ -27,7 +27,7 @@
       [
         "@rnmapbox/maps",
         {
-          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoiYXl1c2gyMjczIiwiYSI6ImNtYTcwazZpaDB5ZDUyaXNncHVvZ2NtcGIifQ.vYddkSm2IGfrjiEPeUsRKg",
+          "RNMapboxMapsDownloadToken": "Access Token",
           "RNMapboxMapsVersion": "11.0.0"
         }
       ]
